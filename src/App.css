@@ -1,3 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+#root,
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.body-bg {
+  height: 100%;
+  width: 100%;
+  background: url(https://assets.nflxext.com/ffe/siteui/vlv3/7c0e18aa-2c95-474d-802e-7f30e75dcca4/web/IN-en-20241014-TRIFECTA-perspective_e7121311-c11e-4809-a3e6-22abffa33569_large.jpg) no-repeat;
+}
