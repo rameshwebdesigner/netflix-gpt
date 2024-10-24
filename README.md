@@ -8,6 +8,13 @@
 - Login/ Sign up
     - Sign in / Sign up form
     - Rediredt to browser 
+    - header
+    - Routing App
+    - Login Form
+    - Form Validation
+    - useRed hook
+    - FireBase Setup
+
 - Brower (After Authentication)
     - Header 
     - Main Movie
