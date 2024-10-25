@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import Header from './Header'
 import { checkValidData } from "../utils/validation"
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase"
 
 
@@ -23,6 +23,7 @@ const Login = () => {
             // sing up login
             createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
+                    debugger;
                     const user = userCredential.user;
                     console.log(user);
                 })
@@ -32,7 +33,18 @@ const Login = () => {
                     setFormErrrors(errorCode + "_" + errorMessage);
                 });
         } else {
-            // sing in login
+            signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+                .then((userCredential) => {
+                    debugger;
+                    // Signed in 
+                    const user = userCredential.user;
+                    console.log(user);
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setFormErrrors(errorCode + "_" + errorMessage);
+                });
         }
     }
     return (

@@ -14,6 +14,9 @@
     - Form Validation
     - useRed hook
     - FireBase Setup
+    - Deploying our app to production
+    - Implemented sign in user API
+    - Created redux store with userSlice
 
 - Brower (After Authentication)
     - Header 
